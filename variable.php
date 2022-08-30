@@ -25,14 +25,63 @@ else{
 
 ?>
 <?php
-function retourner($num1,$num2,$num3):int{
-    return $num1+$num2+$num3;
-}
- echo retourner(10,20,30);
-?>
-<?php
-function moyenne($num1,$num2,$num3):int{
+    //function
+    function retourner($num1,$num2,$num3):int{
+        return $num1+$num2+$num3;
+    }
+    echo retourner(10,20,30);
+    ?>
+    <?php
+    function moyenne($num1,$num2,$num3):int{
 
-   return ($num1+$num2+$num3)/3;
-}
-echo moyenne(10,20,30);
+    return ($num1+$num2+$num3)/3;
+    }
+    echo moyenne(10,20,30);
+    //tableau indéxé:
+    //methode 1
+    $tab=[];
+    //methode 2
+    $tab2=array();
+    $tab[0]='mathieu';
+    $tab2[0]='adrar';
+    $tab2[1]='test';
+    echo $tab[0];
+    echo $tab2[0];
+    //tableau assotiatif:
+    $tab3=['nom'=>'Baro' ,'prenom','age'];
+    $tab3['prenom']='Mathieu';
+    $tab3['age']=38;
+    $tab3['telephone']='06201245795';
+    echo $tab3['nom'];
+    echo $tab3['age'];
+    echo $tab3['telephone'];
+    //pour afficher le tableau :
+    // var_dump($tab3);
+
+    // foreach($tab2 as $value){
+    //     echo $value;
+    // }
+    foreach($tab3 as $key =>$value){
+        echo 'Le '.$key.' : '.$value.'<br>';
+    }
+
+?>
+
+<?php
+    $tabX=[5,11,8,22,36,42,3,78,1,29];
+    function maxValue($tabX){
+        $max=0;
+        foreach ($tabX as $value) {
+            if ($value>$max) {
+            $max=$value;
+            }
+            else{
+                $max=$max;
+            }
+            
+        }
+        return $max;
+    }
+    echo maxValue($tabX);
+
+?>

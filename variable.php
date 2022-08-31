@@ -56,7 +56,7 @@ else{
     echo $tab3['age'];
     echo $tab3['telephone'];
     //pour afficher le tableau :
-    // var_dump($tab3);
+    var_dump($tab3);
 
     // foreach($tab2 as $value){
     //     echo $value;
@@ -85,3 +85,23 @@ else{
     echo maxValue($tabX);
 
 ?>
+
+<?php
+    //une fonction qui va retourner la moyenne d'un tableau :
+    $tablo = [0, 5, 12, 15];
+    //pour connaitre la taille du tableau 
+    $nbrColonne = count($tab);
+    //ou
+    count($tab);
+    function moyen($tab){
+        foreach($tab as $value){
+            $moyenne=0;
+            $value+=$value;
+            $moyenne=$value/count($tab);
+            echo $moyenne;
+            
+        }
+    }
+    moyen($tablo);
+ 
+ ?>
